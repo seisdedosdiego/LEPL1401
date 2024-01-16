@@ -1,0 +1,15 @@
+def facteurs(n):
+    """
+    Pre:  n est un entier strictement positif
+    Post: retourne un entier représentant le nombre de facteurs premiers de n
+    """
+    my_list = []
+    num = n
+    for i in range(2, n + 1):
+        while True:
+            if num % i == 0:
+                my_list.append(i)
+                num = num//i
+            else:
+                break
+    return len(my_list)
